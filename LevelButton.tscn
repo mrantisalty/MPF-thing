@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg2xygf08oxo1"]
+
+[ext_resource type="Script" uid="uid://bxsiiw0o20wym" path="res://control.gd" id="1_ju1u4"]
+[ext_resource type="FontFile" uid="uid://dgvj2gn6smaky" path="res://assets/fonts/PixelOperator8.ttf" id="2_4eycx"]
+[ext_resource type="Theme" uid="uid://d1384q7y00iwy" path="res://ButtonTheme.tres" id="2_ffqll"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ffqll"]
+font = ExtResource("2_4eycx")
+
+[node name="Control" type="Button"]
+custom_minimum_size = Vector2(128, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1088.0
+offset_bottom = -584.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ffqll")
+script = ExtResource("1_ju1u4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 65.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_ffqll")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

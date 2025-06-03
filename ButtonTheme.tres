@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d1384q7y00iwy"]
+
+[ext_resource type="FontFile" uid="uid://dgvj2gn6smaky" path="res://assets/fonts/PixelOperator8.ttf" id="1_vvmgv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fucc5"]
+bg_color = Color(0.252028, 0.252028, 0.252028, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lskjj"]
+bg_color = Color(0.310617, 0.310617, 0.310617, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvmgv"]
+bg_color = Color(0.509286, 0.509286, 0.509286, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+default_font = ExtResource("1_vvmgv")
+Button/styles/focus = SubResource("StyleBoxFlat_fucc5")
+Button/styles/hover = SubResource("StyleBoxFlat_lskjj")
+Button/styles/normal = SubResource("StyleBoxFlat_vvmgv")

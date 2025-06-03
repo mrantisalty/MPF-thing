@@ -1,0 +1,144 @@
+[gd_scene load_steps=19 format=3 uid="uid://0x0j3gsttaoa"]
+
+[ext_resource type="Script" uid="uid://61h0b0vmtmsf" path="res://ui.gd" id="1_27fn8"]
+[ext_resource type="Texture2D" uid="uid://cvc20wfslwiwd" path="res://assets/sprites/coin.png" id="1_m6e0p"]
+[ext_resource type="FontFile" uid="uid://dgvj2gn6smaky" path="res://assets/fonts/PixelOperator8.ttf" id="2_27fn8"]
+[ext_resource type="Texture2D" uid="uid://8onmiewfuwec" path="res://assets/sprites/clock.png" id="4_nltto"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nltto"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibotj"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ude"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4yjw"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waa4j"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok7cu"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irxef"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2l4f"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5rqp"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs482"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxd00"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etlur"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7rqds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nltto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibotj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5ude")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4yjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waa4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok7cu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irxef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2l4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5rqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs482")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxd00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etlur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvb2n"]
+line_spacing = 0.0
+font = ExtResource("2_27fn8")
+font_size = 32
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_27fn8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinSprite" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(32, 32)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_7rqds")
+autoplay = "default"
+frame_progress = 0.306213
+
+[node name="ClockSprite" type="Sprite2D" parent="Control"]
+position = Vector2(31, 86)
+scale = Vector2(4, 4)
+texture = ExtResource("4_nltto")
+
+[node name="Time" type="Label" parent="Control"]
+offset_left = 62.0
+offset_top = 73.0
+offset_right = 1214.0
+offset_bottom = 105.0
+text = "0"
+label_settings = SubResource("LabelSettings_nvb2n")
+
+[node name="Coins" type="Label" parent="Control"]
+offset_left = 62.0
+offset_top = 20.0
+offset_right = 1214.0
+offset_bottom = 52.0
+text = "0"
+label_settings = SubResource("LabelSettings_nvb2n")
